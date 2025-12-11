@@ -1,0 +1,242 @@
+git-github-mastery/
+│
+├── 01-beginner/
+│   ├── 01-introduction/
+│   │   ├── what-is-version-control.md
+│   │   ├── git-vs-github.md
+│   │   ├── why-use-git.md
+│   │   └── installation-setup.md
+│   │
+│   ├── 02-basic-concepts/
+│   │   ├── repository-basics.md
+│   │   ├── three-states-of-git.md
+│   │   ├── working-directory.md
+│   │   ├── staging-area.md
+│   │   └── git-repository.md
+│   │
+│   ├── 03-first-steps/
+│   │   ├── git-init.md
+│   │   ├── git-clone.md
+│   │   ├── git-status.md
+│   │   ├── git-add.md
+│   │   ├── git-commit.md
+│   │   └── commit-messages-best-practices.md
+│   │
+│   ├── 04-basic-operations/
+│   │   ├── git-log.md
+│   │   ├── git-diff.md
+│   │   ├── gitignore-file.md
+│   │   ├── viewing-history.md
+│   │   └── basic-workflow.md
+│   │
+│   └── 05-exercises/
+│       ├── exercise-01-first-repo.md
+│       ├── exercise-02-basic-commits.md
+│       └── practice-projects.md
+│
+├── 02-intermediate/
+│   ├── 01-branching/
+│   │   ├── what-are-branches.md
+│   │   ├── git-branch.md
+│   │   ├── git-checkout.md
+│   │   ├── git-switch.md
+│   │   ├── branch-naming-conventions.md
+│   │   └── branch-strategies.md
+│   │
+│   ├── 02-merging/
+│   │   ├── git-merge.md
+│   │   ├── fast-forward-merge.md
+│   │   ├── three-way-merge.md
+│   │   ├── merge-conflicts.md
+│   │   ├── resolving-conflicts.md
+│   │   └── merge-tools.md
+│   │
+│   ├── 03-remote-repositories/
+│   │   ├── understanding-remotes.md
+│   │   ├── git-remote.md
+│   │   ├── git-clone-deep-dive.md
+│   │   ├── git-fetch.md
+│   │   ├── git-pull.md
+│   │   ├── git-push.md
+│   │   └── tracking-branches.md
+│   │
+│   ├── 04-undoing-changes/
+│   │   ├── git-checkout-files.md
+│   │   ├── git-reset.md
+│   │   ├── git-revert.md
+│   │   ├── git-restore.md
+│   │   ├── reset-vs-revert.md
+│   │   └── amending-commits.md
+│   │
+│   ├── 05-github-basics/
+│   │   ├── creating-github-account.md
+│   │   ├── ssh-keys-setup.md
+│   │   ├── personal-access-tokens.md
+│   │   ├── creating-repositories.md
+│   │   ├── readme-files.md
+│   │   └── github-profile.md
+│   │
+│   ├── 06-collaboration/
+│   │   ├── forking-repositories.md
+│   │   ├── pull-requests.md
+│   │   ├── code-review-basics.md
+│   │   ├── github-issues.md
+│   │   ├── issue-templates.md
+│   │   └── collaborator-management.md
+│   │
+│   └── 07-exercises/
+│       ├── exercise-01-branching-merging.md
+│       ├── exercise-02-conflict-resolution.md
+│       ├── exercise-03-first-pull-request.md
+│       └── exercise-04-collaboration.md
+│
+├── 03-advanced/
+│   ├── 01-rebasing/
+│   │   ├── git-rebase-basics.md
+│   │   ├── interactive-rebase.md
+│   │   ├── rebase-vs-merge.md
+│   │   ├── golden-rule-of-rebasing.md
+│   │   ├── squashing-commits.md
+│   │   └── rebase-conflicts.md
+│   │
+│   ├── 02-advanced-operations/
+│   │   ├── git-cherry-pick.md
+│   │   ├── git-stash.md
+│   │   ├── git-tag.md
+│   │   ├── annotated-vs-lightweight-tags.md
+│   │   ├── git-blame.md
+│   │   └── git-bisect.md
+│   │
+│   ├── 03-git-workflows/
+│   │   ├── gitflow-workflow.md
+│   │   ├── github-flow.md
+│   │   ├── trunk-based-development.md
+│   │   ├── forking-workflow.md
+│   │   ├── feature-branch-workflow.md
+│   │   └── choosing-workflow.md
+│   │
+│   ├── 04-git-internals/
+│   │   ├── git-objects.md
+│   │   ├── blobs-trees-commits.md
+│   │   ├── references.md
+│   │   ├── head-and-branches.md
+│   │   ├── git-directory-structure.md
+│   │   ├── packfiles.md
+│   │   └── garbage-collection.md
+│   │
+│   ├── 05-advanced-github/
+│   │   ├── github-actions/
+│   │   │   ├── introduction-to-actions.md
+│   │   │   ├── workflows.md
+│   │   │   ├── jobs-and-steps.md
+│   │   │   ├── triggers-and-events.md
+│   │   │   ├── marketplace-actions.md
+│   │   │   └── ci-cd-pipelines.md
+│   │   │
+│   │   ├── github-pages.md
+│   │   ├── github-projects.md
+│   │   ├── github-wikis.md
+│   │   ├── github-discussions.md
+│   │   ├── github-security/
+│   │   │   ├── dependabot.md
+│   │   │   ├── security-advisories.md
+│   │   │   ├── code-scanning.md
+│   │   │   └── secret-scanning.md
+│   │   │
+│   │   └── github-packages.md
+│   │
+│   ├── 06-advanced-collaboration/
+│   │   ├── code-review-advanced.md
+│   │   ├── pull-request-templates.md
+│   │   ├── branch-protection-rules.md
+│   │   ├── required-reviews.md
+│   │   ├── codeowners-file.md
+│   │   └── team-management.md
+│   │
+│   ├── 07-hooks-and-automation/
+│   │   ├── git-hooks-introduction.md
+│   │   ├── client-side-hooks.md
+│   │   ├── server-side-hooks.md
+│   │   ├── pre-commit-hooks.md
+│   │   ├── commit-msg-hooks.md
+│   │   ├── pre-push-hooks.md
+│   │   └── hook-frameworks.md
+│   │
+│   ├── 08-submodules-and-subtrees/
+│   │   ├── git-submodules.md
+│   │   ├── working-with-submodules.md
+│   │   ├── git-subtree.md
+│   │   ├── submodules-vs-subtrees.md
+│   │   └── monorepo-strategies.md
+│   │
+│   ├── 09-advanced-techniques/
+│   │   ├── git-reflog.md
+│   │   ├── recovering-lost-commits.md
+│   │   ├── git-filter-branch.md
+│   │   ├── git-filter-repo.md
+│   │   ├── rewriting-history.md
+│   │   ├── git-worktree.md
+│   │   ├── sparse-checkout.md
+│   │   ├── shallow-clones.md
+│   │   └── large-file-storage.md
+│   │
+│   ├── 10-performance-optimization/
+│   │   ├── repository-maintenance.md
+│   │   ├── optimizing-large-repos.md
+│   │   ├── git-gc.md
+│   │   ├── git-prune.md
+│   │   └── commit-graph.md
+│   │
+│   └── 11-exercises/
+│       ├── exercise-01-rebase-practice.md
+│       ├── exercise-02-workflow-implementation.md
+│       ├── exercise-03-github-actions.md
+│       ├── exercise-04-conflict-scenarios.md
+│       └── capstone-project.md
+│
+├── 04-best-practices/
+│   ├── commit-best-practices.md
+│   ├── branch-naming-conventions.md
+│   ├── code-review-guidelines.md
+│   ├── security-best-practices.md
+│   ├── repository-structure.md
+│   ├── documentation-practices.md
+│   └── team-conventions.md
+│
+├── 05-troubleshooting/
+│   ├── common-errors.md
+│   ├── merge-conflict-scenarios.md
+│   ├── detached-head-state.md
+│   ├── authentication-issues.md
+│   ├── push-pull-problems.md
+│   └── recovery-techniques.md
+│
+├── 06-real-world-scenarios/
+│   ├── open-source-contribution.md
+│   ├── team-collaboration.md
+│   ├── hotfix-workflow.md
+│   ├── release-management.md
+│   ├── monorepo-management.md
+│   └── migration-strategies.md
+│
+├── 07-tools-and-resources/
+│   ├── git-gui-tools.md
+│   ├── command-line-tools.md
+│   ├── ide-integrations.md
+│   ├── useful-aliases.md
+│   ├── git-configurations.md
+│   └── recommended-resources.md
+│
+├── 08-cheatsheets/
+│   ├── beginner-cheatsheet.md
+│   ├── intermediate-cheatsheet.md
+│   ├── advanced-cheatsheet.md
+│   ├── github-cheatsheet.md
+│   └── quick-reference.md
+│
+└── 09-projects/
+    ├── project-01-personal-portfolio.md
+    ├── project-02-collaboration-exercise.md
+    ├── project-03-ci-cd-pipeline.md
+    ├── project-04-open-source-contribution.md
+    └── project-05-team-workflow.md
