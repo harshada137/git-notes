@@ -1,0 +1,42 @@
+# Git vs GitHub
+  Git and GitHub sound similar but serve completely different purposes. Understanding the difference is essential before working with repositories.
+
+# What Is Git?
+  Git is a distributed version control system used to track changes in source code. It runs locally on your computer and allows you to create repositories, commit changes, work with branches, and manage your project history.
+
+# Key Features of Git
+- Tracks every modification in a project
+- Allows offline work
+- Supports branching and merging
+- Lets developers inspect, compare, and revert changes
+- Ensures speed and efficient storage
+- Works without internet or any external service
+
+# What Is GitHub?
+  GitHub is an online hosting platform built on top of Git. It provides cloud storage for Git repositories and offers tools for collaboration, automation, and project management.
+
+# Key Features of GitHub
+- Stores Git repositories in the cloud
+- Enables team collaboration through pull requests and code review
+- Provides issue tracking and project boards
+- Offers GitHub Actions for CI/CD
+- Allows sharing code publicly or privatel
+- Makes open-source contribution easier
+
+| Feature             | Git                           | GitHub                                           |
+| ------------------- | ----------------------------- | ------------------------------------------------ |
+| Type                | Version Control System        | Cloud Hosting Platform                           |
+| Works               | Locally on your system        | Online on the web                                |
+| Internet Required   | No                            | Yes                                              |
+| Purpose             | Track and manage code changes | Host, share, and collaborate on Git repositories |
+| User Interface      | Command line                  | Web interface                                    |
+| Branching & Merging | Yes                           | Uses Git’s features                              |
+| Pull Requests       | No                            | Yes                                              |
+| CI/CD               | No                            | Yes (GitHub Actions)                             |
+
+
+# Simple Analogy
+- Git is a tool you use to track changes in your code.
+- GitHub is a place where you store that code so others can collaborate with you.
+
+**Git works even without GitHub, but GitHub cannot work without Git.**
