@@ -1,0 +1,104 @@
+# Three States of Git
+
+Git manages files by moving them through **three well-defined states**. Understanding these states is critical to using Git correctly and confidently.
+
+---
+
+## Overview of the Three States
+
+Every file in a Git project exists in one of the following states:
+
+1. **Working Directory**
+2. **Staging Area (Index)**
+3. **Git Repository**
+
+These states represent the lifecycle of changes from editing to permanent storage.
+
+---
+
+## 1. Working Directory
+
+The working directory is the place where you actively work on files.
+
+* Files are edited, created, or deleted here
+* Changes are not yet recorded by Git
+* Git only sees these changes after specific commands are run
+
+Examples:
+
+* Writing code
+* Updating configuration files
+* Adding new project files
+
+At this stage, changes exist only on your local system.
+
+---
+
+## 2. Staging Area (Index)
+
+The staging area is an intermediate step between the working directory and the repository.
+
+* Holds changes that are ready to be committed
+* Allows selective commits
+* Helps organize meaningful commit history
+
+When you add files to staging, you are telling Git:
+
+> “These exact changes should go into the next commit.”
+
+---
+
+## 3. Git Repository
+
+The Git repository is where committed changes are permanently stored.
+
+* Each commit is saved as a snapshot
+* Commits form a chronological project history
+* Stored inside the `.git` directory
+
+Once changes reach this state, they become part of the version history.
+
+---
+
+## State Transition Flow
+
+```
+Working Directory → Staging Area → Git Repository
+```
+
+### Commands Involved
+
+* `git add` → moves changes to the staging area
+* `git commit` → saves staged changes to the repository
+
+---
+
+## Why Git Uses Three States
+
+* Provides control over what gets committed
+* Prevents accidental commits
+* Enables clean and logical commit history
+* Supports professional workflows
+
+This design makes Git powerful and flexible compared to simpler version control systems.
+
+---
+
+## Real-World Example
+
+1. Modify multiple files in the working directory
+2. Stage only relevant files using `git add`
+3. Commit staged changes with a clear message
+
+Unrelated changes can be staged and committed separately.
+
+---
+
+## Summary
+
+* Git tracks files using three states
+* Working Directory is for editing
+* Staging Area prepares commits
+* Git Repository stores permanent history
+
+Mastering these states is essential for effective Git usage.
