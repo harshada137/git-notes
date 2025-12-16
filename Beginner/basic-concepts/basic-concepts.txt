@@ -1,0 +1,271 @@
+# Repository Basics
+
+A **Git repository** is the core structure where Git stores and manages all versions of a project. Understanding repository basics is essential before performing any Git operations.
+
+---
+
+## What is a Repository?
+
+A repository (repo) is a directory that contains:
+
+* Project files (source code, configuration files, assets)
+* A hidden `.git` folder that stores version history and metadata
+
+The `.git` directory contains:
+
+* Commit history
+* Branch information
+* Configuration settings
+* Staging data
+
+Without this folder, Git cannot track changes.
+
+---
+
+## Types of Git Repositories
+
+### 1. Local Repository
+
+* Exists on your local machine
+* Used for development and testing
+* Created using `git init` or `git clone`
+
+### 2. Remote Repository
+
+* Hosted on platforms like GitHub, GitLab, Bitbucket
+* Used for collaboration and backup
+* Accessed via network
+
+---
+
+## Creating a Repository
+
+### Initialize a New Repository
+
+```bash
+git init
+```
+
+This command:
+
+* Creates a `.git` folder
+* Starts version tracking
+
+### Clone an Existing Repository
+
+```bash
+git clone <repository-url>
+```
+
+This copies:
+
+* All files
+* Entire commit history
+
+---
+
+## Repository Structure
+
+* `.git/` → Git internal data
+* Working files → Project source files
+
+Only `.git` controls versioning.
+
+---
+
+## Why Repository Matters
+
+* Maintains complete history
+* Enables collaboration
+* Allows rollback and recovery
+* Supports branching and merging
+
+---
+
+# Three States of Git
+
+Git manages files through **three distinct states**, which define how changes move through the system.
+
+---
+
+## 1. Working Directory
+
+* Where files are edited
+* Contains modified or new files
+* Changes are not yet tracked by Git
+
+---
+
+## 2. Staging Area (Index)
+
+* Temporary holding area
+* Stores selected changes for the next commit
+* Allows partial commits
+
+---
+
+## 3. Git Repository
+
+* Stores committed snapshots
+* Represents permanent project history
+* Changes here are versioned
+
+---
+
+## State Flow
+
+```
+Working Directory → Staging Area → Git Repository
+```
+
+Commands involved:
+
+* `git add` → move to staging
+* `git commit` → save to repository
+
+---
+
+# Working Directory
+
+The **working directory** is the actual folder on your system containing project files.
+
+---
+
+## Characteristics
+
+* Files can be:
+
+  * Tracked
+  * Untracked
+* Reflects the current checkout
+* Changes here are local only
+
+---
+
+## File Status in Working Directory
+
+* **Untracked** → new files not added
+* **Modified** → changed tracked files
+* **Unmodified** → unchanged files
+
+Check status:
+
+```bash
+git status
+```
+
+---
+
+## Role in Development
+
+* Write code
+* Modify configurations
+* Prepare files for staging
+
+Nothing is versioned until staged.
+
+---
+
+# Staging Area
+
+The **staging area** acts as an intermediate step between working directory and repository.
+
+---
+
+## Purpose of Staging Area
+
+* Select specific changes
+* Organize commits logically
+* Avoid committing unnecessary changes
+
+---
+
+## Common Commands
+
+### Stage a File
+
+```bash
+git add filename
+```
+
+### Stage All Changes
+
+```bash
+git add .
+```
+
+### Unstage a File
+
+```bash
+git restore --staged filename
+```
+
+---
+
+## Why Staging is Important
+
+* Cleaner commit history
+* Better code reviews
+* Professional workflows
+
+---
+
+# Git Repository
+
+The **Git repository** is where Git permanently stores committed changes.
+
+---
+
+## What Happens in a Commit
+
+* Git takes a snapshot of staged files
+* Assigns a unique commit hash
+* Records author and timestamp
+
+---
+
+## Commit Command
+
+```bash
+git commit -m "commit message"
+```
+
+---
+
+## Repository Data
+
+Contains:
+
+* Commits
+* Branches
+* Tags
+* Logs
+
+---
+
+## Viewing History
+
+```bash
+git log
+```
+
+---
+
+## Importance of Git Repository
+
+* Single source of truth
+* Enables collaboration
+* Supports CI/CD pipelines
+* Ensures code integrity
+
+---
+
+## Summary
+
+* Repository manages version control
+* Git operates in three states
+* Working directory is for editing
+* Staging area prepares commits
+* Git repository stores history
+
+Mastering these concepts is essential for **real-world Git usage**.
