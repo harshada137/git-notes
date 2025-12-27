@@ -615,10 +615,3 @@ git diff               # See changes
 git diff --staged      # See staged changes
 ```
 
-## Next Steps
-
-- Learn advanced branching strategies (Git Flow, GitHub Flow)
-- Master interactive rebasing for clean history
-- Explore Git hooks for automation
-- Study merge vs rebase strategies
-- Practice resolving complex merge conflicts
