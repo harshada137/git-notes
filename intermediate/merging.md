@@ -27,7 +27,7 @@ merging/ │ ├── git-merge.md ├── fast-forward-merge.md ├── th
 ### 🔹 Syntax
 ```bash
 git merge <branch-name>
-
+```
 
 ---
 
