@@ -251,4 +251,19 @@ This is professional workflow used in:
 * Cloud projects
 * Open-source
 * Corporate development
-]
+
+---
+
+# 🎯 Interview Important Points (For You – DevOps Role)
+
+Since you are preparing for DevOps roles, remember:
+
+* Difference between fork and branch
+* How PR workflow works
+* What is code review process
+* How to protect main branch
+* How to assign reviewers
+* How to link issue to PR
+* How to resolve merge conflicts
+
+
