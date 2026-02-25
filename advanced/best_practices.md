@@ -68,7 +68,7 @@ Answer:
 
 ---
 
-## 2️⃣ branch-naming-conventions.md
+## 2️⃣ branch-naming-conventions
 
 ### ✅ What It Means
 
@@ -153,7 +153,7 @@ Answer:
 
 ---
 
-## 4️⃣ security-best-practices.md
+## 4️⃣ security-best-practices
 
 This is VERY important for DevOps roles.
 
@@ -216,7 +216,7 @@ Answer:
 
 ---
 
-## 5️⃣ repository-structure.md
+## 5️⃣ repository-structure
 
 ### ✅ What It Means
 
