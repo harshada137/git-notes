@@ -1,42 +1,74 @@
-# 📂 Troubleshooting
+# 📘 Git Troubleshooting Guide (Complete)
 
-This folder is dedicated to **real-world Git problems and recovery methods**.
+# 1️⃣ Common Git Errors
 
-In production (especially in teams using Git + CI/CD), troubleshooting Git issues is VERY important.
+## ❌ Error: `fatal: not a git repository`
 
-Now let’s explain each file:
+**Cause:** You are not inside a Git repository.
 
----
+**Fix:**
 
-## 📄 `common-errors.md`
+```bash
+git init
+```
 
-This file usually contains:
-
-Typical beginner + intermediate Git errors like:
-
-* `fatal: not a git repository`
-* `error: failed to push some refs`
-* `merge conflict`
-* `detached HEAD`
-* `permission denied (publickey)`
-* `non-fast-forward updates were rejected`
-
-### 🎯 Purpose:
-
-Quick reference guide for debugging Git errors.
-
-In production:
-When CI pipeline fails due to Git issues, these are common causes.
+or move into the correct project directory.
 
 ---
 
-## 📄 `merge-conflict-scenarios.md`
+## ❌ Error: `failed to push some refs`
 
-This file explains:
+**Cause:** Remote branch has new commits you don’t have locally.
 
-* What is a merge conflict?
-* When does it happen?
-* Example conflict markers:
+**Fix:**
+
+```bash
+git pull origin main
+git push origin main
+```
+
+---
+
+## ❌ Error: `permission denied (publickey)`
+
+**Cause:** SSH key not configured.
+
+**Fix:**
+
+```bash
+ssh-keygen
+ssh-add ~/.ssh/id_rsa
+```
+
+Add the public key to GitHub/GitLab.
+
+---
+
+## ❌ Error: `non-fast-forward updates were rejected`
+
+**Cause:** Local branch is behind remote.
+
+**Fix:**
+
+```bash
+git pull origin main
+```
+
+---
+
+# 2️⃣ Merge Conflict Scenarios
+
+## 🔹 What is a Merge Conflict?
+
+Occurs when:
+
+* Two developers edit the same line
+* Branch is outdated
+* Rebase conflict occurs
+
+---
+
+## 🔹 Conflict Markers Example
 
 ```bash
 <<<<<<< HEAD
@@ -46,34 +78,31 @@ Other branch code
 >>>>>>> branch-name
 ```
 
-### Real-world situations:
+---
 
-* Two developers edited same line
-* Feature branch outdated
-* Rebase conflict
-* Conflict during pull
+## 🔹 How to Resolve
 
-### 🎯 Production relevance:
+1. Open conflicted file
+2. Remove conflict markers
+3. Choose correct code
+4. Add & commit
 
-If DevOps engineer can’t resolve conflicts → deployment blocked.
+```bash
+git add .
+git commit
+```
 
 ---
 
-## 📄 `detached-head-state.md`
+# 3️⃣ Detached HEAD State
 
-This explains the famous:
+## 🔹 What is Detached HEAD?
 
-```bash
-You are in 'detached HEAD' state
-```
+Occurs when you checkout:
 
-### What is it?
-
-You checked out:
-
-* A commit hash
-* A tag
-* Or a previous commit
+* Commit hash
+* Tag
+* Old commit
 
 Example:
 
@@ -81,85 +110,96 @@ Example:
 git checkout 3f4a9b2
 ```
 
-Now you're not on a branch.
+Now you are not on a branch.
 
-### Risk:
+---
 
-If you commit here → commits may be lost.
+## 🔹 Why It’s Risky?
 
-### Recovery:
+Commits made here may be lost.
+
+---
+
+## 🔹 Fix
+
+Create a branch:
 
 ```bash
 git checkout -b new-branch-name
 ```
 
-### 🎯 Production impact:
+---
 
-Can break CI/CD if build is done from wrong commit reference.
+# 4️⃣ Authentication Issues
+
+## 🔹 HTTPS Authentication Problem
+
+GitHub removed password authentication.
+
+Use Personal Access Token (PAT).
+
+When prompted for password → enter token.
 
 ---
 
-## 📄 `authentication-issues.md`
+## 🔹 SSH Authentication Issue
 
-This file handles Git authentication problems.
+Error:
 
-Common issues:
+```bash
+Permission denied (publickey)
+```
 
-### 🔹 HTTPS issues:
+### Fix:
 
-* Username/password not working
-* GitHub password authentication removed
-
-Solution:
-Use Personal Access Token (PAT)
-
-### 🔹 SSH issues:
-
-* `Permission denied (publickey)`
-* SSH key not added to GitHub
-* Wrong SSH config
-
-Fix:
+Generate SSH key:
 
 ```bash
 ssh-keygen
-ssh-add
 ```
 
-### 🎯 Production relevance:
+Add SSH key:
 
-CI/CD pipelines fail if Git repo access fails.
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
+Copy public key:
+
+```bash
+cat ~/.ssh/id_rsa.pub
+```
+
+Add it to GitHub → Settings → SSH Keys.
 
 ---
 
-## 📄 `push-pull-problems.md`
+# 5️⃣ Push & Pull Problems
 
-This handles errors like:
+---
 
-### ❌ Push rejected:
+## ❌ Push Rejected
 
 ```bash
 ! [rejected] main -> main (non-fast-forward)
 ```
 
-Reason:
-Your local branch is behind remote.
-
-Fix:
+### Fix:
 
 ```bash
 git pull origin main
+git push origin main
 ```
 
 ---
 
-### ❌ Pull error:
+## ❌ Refusing to Merge Unrelated Histories
 
 ```bash
 fatal: refusing to merge unrelated histories
 ```
 
-Fix:
+### Fix:
 
 ```bash
 git pull origin main --allow-unrelated-histories
@@ -167,47 +207,91 @@ git pull origin main --allow-unrelated-histories
 
 ---
 
-### 🎯 Production impact:
+## ❌ Cannot Pull Because of Local Changes
 
-If push fails → deployment stops.
+Fix:
+
+```bash
+git stash
+git pull
+git stash apply
+```
 
 ---
 
-## 📄 `recovery-techniques.md`
+# 6️⃣ Recovery Techniques (Very Important)
 
-This is VERY IMPORTANT for DevOps engineers 🔥
+---
 
-It explains how to recover from mistakes.
-
-Common recovery commands:
-
-### 🔹 Undo last commit (keep changes):
+## 🔹 Undo Last Commit (Keep Changes)
 
 ```bash
 git reset --soft HEAD~1
 ```
 
-### 🔹 Undo last commit (delete changes):
+---
+
+## 🔹 Undo Last Commit (Delete Changes)
 
 ```bash
 git reset --hard HEAD~1
 ```
 
-### 🔹 Recover deleted branch:
+---
+
+## 🔹 Recover Deleted Branch
 
 ```bash
 git reflog
 git checkout -b branch-name commit-id
 ```
 
-### 🔹 Recover lost commit:
+---
 
-Using `git reflog`
+## 🔹 Recover Lost Commit
 
-### 🔹 Stash recovery:
+```bash
+git reflog
+```
+
+Find commit hash and restore:
+
+```bash
+git checkout commit-id
+```
+
+---
+
+## 🔹 Stash Recovery
+
+See stash list:
 
 ```bash
 git stash list
+```
+
+Apply stash:
+
+```bash
 git stash apply
 ```
+
+Delete stash:
+
+```bash
+git stash drop
+```
+
+---
+
+# 🎯 Most Important Commands for DevOps
+
+| Situation                                 | Command      |
+| ----------------------------------------- | ------------ |
+| Check history                             | `git log`    |
+| Check current branch                      | `git branch` |
+| See commit history including deleted refs | `git reflog` |
+| Undo commit                               | `git reset`  |
+| Safely undo commit (public branch)        | `git revert` |
+| Temporarily save changes                  | `git stash`  |
 
