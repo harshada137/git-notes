@@ -1,4 +1,4 @@
-# 📂 `Troubleshooting`
+# 📂 Troubleshooting
 
 This folder is dedicated to **real-world Git problems and recovery methods**.
 
