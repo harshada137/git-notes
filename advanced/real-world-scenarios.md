@@ -1,6 +1,6 @@
 
 
-# 1️⃣ open-source-contribution.md (GitHub)
+# 1️⃣ open-source-contribution
 
 ## 🔎 What It Means in GitHub
 
@@ -55,7 +55,7 @@ Options available:
 
 ---
 
-# 2️⃣ team-collaboration.md (GitHub)
+# 2️⃣ team-collaboration
 
 ## 🔎 What It Means in GitHub
 
@@ -137,7 +137,7 @@ After merging:
 
 ---
 
-# 4️⃣ release-management.md (GitHub)
+# 4️⃣ release-management
 
 ## 🔎 What It Means
 
@@ -185,7 +185,7 @@ v2.1.3
 
 ---
 
-# 5️⃣ monorepo-management.md (GitHub)
+# 5️⃣ monorepo-management
 
 ## 🔎 What Is Monorepo in GitHub
 
@@ -227,7 +227,7 @@ Example:
 
 ---
 
-# 6️⃣ migration-strategies.md (GitHub)
+# 6️⃣ migration-strategies
 
 ## 🔎 Migration Scenarios in GitHub
 
