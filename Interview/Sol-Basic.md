@@ -1,0 +1,1 @@
+#Solution for basic tasks
