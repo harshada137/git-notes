@@ -1,57 +1,34 @@
-## Level 1: Basic Git Practical Questions
+# Level 1: Basic Git Practical Tasks
 
-1. **Initialize a Git repository in a new project folder**  
-   **Commands to use:**  
-   ```
-   git init
-   git status
+## Task 1
+Initialize a Git repository in a new project folder.
 
+---
 
-2. **Create a file `hello.txt`, add some content, and commit it**
-   **Commands:**
+## Task 2
+Create a file named `hello.txt`, add some content to it, and commit the file.
 
-   ```bash
-   git add hello.txt
-   git commit -m "Initial commit"
-   ```
+---
 
-3. **Check the commit history in a simple repository**
-   **Commands:**
+## Task 3
+Check the commit history in the repository.
 
-   ```bash
-   git log
-   git log --oneline
-   ```
+---
 
-4. **Rename the branch `master` to `main`**
-   **Commands:**
+## Task 4
+Rename the branch `master` to `main`.
 
-   ```bash
-   git branch -m master main
-   ```
+---
 
-5. **Configure your Git username and email globally**
-   **Commands:**
+## Task 5
+Configure your Git username and email globally.
 
-   ```bash
-   git config --global user.name "Your Name"
-   git config --global user.email "you@example.com"
-   ```
+---
 
-6. **Check the difference between staged and unstaged changes**
-   **Commands:**
+## Task 6
+Check the difference between staged and unstaged changes.
 
-   ```bash
-   git status
-   git diff
-   git diff --staged
-   ```
+---
 
-7. **Remove a file from tracking but keep it locally**
-   **Command:**
-
-   ```bash
-   git rm --cached filename.txt
-   ```
-
-
+## Task 7
+Remove a file from Git tracking but keep the file in your local system.
